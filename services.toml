@@ -1,0 +1,9 @@
+[services.baz]
+	name = "Baz"
+	promaddr = "prometheus.svc:9090"
+	query = """sum by (foo) up{bat="bam"}"""
+
+[services.mogwi]
+	name = "Mogwi"
+	promaddr = "prometheus.svc:9090"
+	query = """sum by (mogwi) up{service="mogwi"}"""
